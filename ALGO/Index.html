@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualisation — Arbres & Graphes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1>Visualisation — Arbres & Graphes</h1>
+
+  <div class="tree-selector">
+    <button data-tree="BST" class="active">BST</button>
+    <button data-tree="AVL">AVL</button>
+    <button data-tree="Heap">Heap</button>
+    <button data-tree="MHeap">M-Heap</button>
+    <button data-tree="Bitonic">Bitonic Sort</button>
+    <button data-tree="Graf">Graf</button>
+    <button data-tree="WelchPowel">Welch-Powell</button>
+    <button data-tree="JohnsonGraph">JohnsonGraph</button>
+  </div>
+
+  
+  <div id="welchControls" style="display:none; margin-top:15px;">
+    <button id="addNodeBtn">Add Node</button>
+    <button id="deleteNodeBtn">Delete Node</button>
+    <button id="addLinkBtn">Add Link</button>
+    <button id="deleteLinkBtn">Delete Link</button>
+    <button id="showMatrixBtn">Adjacency Matrix</button>
+  </div>
+
+  
+  <div id="johnsonControls" style="display:none; margin-top:15px;">
+    <button id="johnsonAddNodeBtn">Add Node</button>
+    <button id="johnsonDeleteNodeBtn">Delete Node</button>
+    <button id="johnsonAddLinkBtn">Add Link</button>
+    <button id="johnsonDeleteLinkBtn">Delete Link</button>
+    <button id="johnsonShowMatrixBtn">Adjacency Matrix</button>
+    <button id="runJohnsonBtn">Shortest Path</button>
+    <button id="runJohnsonBtn">Run Johnson (All-Pairs Paths)</button>
+
+   <!-- <input id="startNodeInput" type="text" placeholder="Start Node" /> -->
+   <!-- <input id="endNodeInput" type="text" placeholder="End Node" />-->
+    <!-- <button id="runJohnsonBtn">Run Shortest Path</button>-->
+    <button id="runJohnsonAllBtn">Run All-Pairs Shortest Paths</button>
+  </div>
+
+  
+  <div id="graphOptions" style="display:none; margin-top:10px;">
+    <h3>Options Graphe</h3>
+    <label>
+      <input type="checkbox" id="orienteCheckbox"> Orienté
+    </label>
+  </div>
+
+  
+  <div class="controls" style="margin-top:15px;">
+    <input id="mValueInput" type="number" placeholder="m pour M-Heap (ex: 3)" style="display:none;" />
+    <input id="valueInput" type="text" placeholder="Entrez des nombres (ex: 10 5 20)" />
+    <button id="insertBtn">Insérer</button>
+    <button id="searchBtn">Chercher</button>
+    <button id="deleteBtn">Supprimer</button>
+    <button id="clearBtn">Nettoyer</button>
+    <button id="sortBtn">Sort</button>
+  </div>
+
+ 
+  <div id="canvasWrapper" style="margin-top:15px;">
+    <canvas id="treeCanvas" width="1000" height="700" style="display:block;"></canvas>
+    <canvas id="welchCanvas" width="1000" height="700" style="display:none;"></canvas>
+    <canvas id="johnsonCanvas" width="1000" height="700" style="display:none;"></canvas>
+  </div>
+ 
+<div id="johnsonTableContainer" style="margin-top:10px;"></div>
+
+
+  <script src="js/BST.js"></script>
+  <script src="js/AVL.js"></script>
+  <script src="js/Heap.js"></script>
+  <script src="js/MHeap.js"></script>
+  <script src="js/Graf.js"></script>
+  <script src="js/BitonicSort.js"></script>
+  <script src="js/WelchPowel.js"></script>
+  <script src="js/JohnsonGraph.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
